@@ -7,7 +7,7 @@ configuration:
   analytics:
     provider: plausible
   locale: en-US
-  baseUrl: rudrabuilds.github.io
+  baseUrl: rudraBuilds.github.io
   ignorePatterns:
     - private
     - templates
