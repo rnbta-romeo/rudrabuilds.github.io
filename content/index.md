@@ -1,7 +1,7 @@
 ---
-title: Welcome!
+title: Hey there!
 ---
-# Hey there! Welcome to my small and humble digital space...
+# Welcome to my small and humble digital space...
 
 Here I will be documenting my baby steps into the world of tech, coding, robots, philosophy...and everything that lies in between. 
 
