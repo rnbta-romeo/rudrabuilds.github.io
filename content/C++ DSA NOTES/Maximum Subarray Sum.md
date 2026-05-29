@@ -1,3 +1,7 @@
+---
+tags:
+  - Kadanes-Algorithm
+---
 ```cpp
 #include <iostream>
 using namespace std;

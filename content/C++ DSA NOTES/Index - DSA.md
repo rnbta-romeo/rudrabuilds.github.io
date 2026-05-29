@@ -1,2 +1,4 @@
-1) [[Maximum Subarray Sum (Kadane's Algorithm)]]
-2) 
+1) [[Maximum Subarray Sum]]
+2) [[Pair Sum]]
+3) [[Majority Element]]
+4) 
