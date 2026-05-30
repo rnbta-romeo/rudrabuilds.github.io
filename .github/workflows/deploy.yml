@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - v5
+
+env:
+  THEME_NAME: <THEME-NAME>
  
 permissions:
   contents: read
