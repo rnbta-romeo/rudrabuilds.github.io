@@ -1,4 +1,3 @@
-# Kalman Filter — Intuition First
 
 ## The Problem
 
@@ -173,13 +172,9 @@ This uncertainty is stored in the covariance matrix $P$.
 
 Example:
 
-Estimate A:
+Estimate A: $100 \pm 0.01$
 
-$100 \pm 0.01$
-
-Estimate B:
-
-$100 \pm 20$
+Estimate B: $100 \pm 20$
 
 Both estimates are 100, but the confidence is very different.
 
