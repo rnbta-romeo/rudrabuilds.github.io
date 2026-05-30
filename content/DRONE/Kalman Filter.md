@@ -1,226 +1,195 @@
-# Kalman Filtering
+# Kalman Filter — Intuition First
 
-## Core Idea
+## The Problem
 
-In many engineering systems (drones, aircraft, robots, missiles), the true internal state cannot be measured directly.
+Imagine you're trying to track a moving car in thick fog.
 
-Instead, we have:
+You have two sources of information:
 
-1. A mathematical model that predicts how the system evolves.
-2. Sensors that provide noisy and indirect observations.
+1. A mathematical model (physics)
+2. A noisy sensor
 
-The Kalman Filter combines both to produce the best estimate of the system state under linear-Gaussian assumptions.
+The model predicts where the car should be.
 
----
+The sensor tells you where it thinks the car is.
 
-# System Model
+Unfortunately, both can be wrong.
 
-## Continuous-Time System
-
-State Equation:
-
-$$
-\dot{x}=f(x,u)
-$$
-
-Measurement Equation:
-
-$$
-z=h(x,u)
-$$
-
-where:
-
-- $x$ = state vector
-- $u$ = control input
-- $z$ = measurement vector
-
-Example:
-
-$$
-x=
-\begin{bmatrix}
-\text{position}\\
-\text{velocity}
-\end{bmatrix}
-$$
+The Kalman Filter combines them intelligently to obtain the best estimate.
 
 ---
 
-## Linearized System
+## What Is The State?
 
-After linearization around an operating point:
+The **state** is simply the information needed to describe the system.
 
-$$
-\dot{x}=Ax+Bu
-$$
+For a moving object:
 
-$$
-z=Hx
-$$
+$x = [\text{position}, \text{velocity}]^T$
 
-where:
+For a drone:
 
-- $A$ = state transition matrix
-- $B$ = control matrix
-- $H$ = observation matrix
+$x = [x,y,z,v_x,v_y,v_z]^T$
+
+The goal of the Kalman Filter is to estimate the state.
 
 ---
 
-# Discrete-Time Kalman Filter Model
+## Why Not Just Use Sensors?
 
-The Kalman Filter operates in discrete time.
+Sensors contain noise.
 
-## Process Equation
+Examples:
+
+- GPS drifts
+- Accelerometers are noisy
+- Gyroscopes drift over time
+
+Using sensor data directly leads to inaccurate estimates.
+
+---
+
+## Why Not Just Use Physics?
+
+The mathematical model is never perfect.
+
+Examples:
+
+- Wind gusts
+- Changing battery voltage
+- Unmodelled disturbances
+
+Using only the model also leads to errors.
+
+---
+
+## The Core Idea
+
+A Kalman Filter continuously answers:
+
+> How much should I trust the model?
+>
+> How much should I trust the sensor?
+
+---
+
+# Mathematical Model
+
+The system evolves according to:
 
 $$
 x_k = A x_{k-1} + B u_{k-1} + w_{k-1}
 $$
 
-## Measurement Equation
+where:
+
+- $x_k$ = current state
+- $A$ = system dynamics matrix
+- $u_k$ = control input
+- $B$ = control matrix
+- $w_k$ = process noise
+
+Think of this equation as:
+
+> New State = Predicted State + Control Effect + Unknown Disturbances
+
+---
+
+## Process Noise
+
+The term $w_k$ represents things that happen in reality but are not included in the model.
+
+Examples:
+
+- Wind
+- Vibrations
+- Modelling errors
+
+We assume:
+
+$w_k \sim \mathcal N(0,Q)$
+
+where $Q$ is called the **process noise covariance**.
+
+### Intuition
+
+Small $Q$:
+
+> I trust my model.
+
+Large $Q$:
+
+> I do not trust my model very much.
+
+---
+
+## Sensor Measurements
+
+Sensors provide measurements according to:
 
 $$
-z_k = H x_k + v_k
+z_k = Hx_k + v_k
 $$
 
 where:
 
-- $x_k$ = state vector
-- $u_k$ = control input
 - $z_k$ = measurement
+- $H$ = observation matrix
+- $v_k$ = measurement noise
 
-Process noise:
+Think:
 
-$$
-w_k \sim \mathcal N(0,Q)
-$$
-
-Measurement noise:
-
-$$
-v_k \sim \mathcal N(0,R)
-$$
+> Measurement = Reality + Sensor Error
 
 ---
 
-# Meaning of Q and R
+## Measurement Noise
 
-## Process Noise Covariance Q
+We assume:
 
-Represents uncertainty in the mathematical model.
+$v_k \sim \mathcal N(0,R)$
 
-Sources:
+where $R$ is the **measurement noise covariance**.
 
-- Wind disturbances
-- Unmodeled dynamics
-- Parameter errors
-- Numerical approximations
-
-Large $Q$:
-
-> "I don't trust my model."
-
-Small $Q$:
-
-> "My model is highly accurate."
-
----
-
-## Measurement Noise Covariance R
-
-Represents sensor uncertainty.
-
-Sources:
-
-- GPS noise
-- Accelerometer noise
-- Gyroscope noise
-- Quantization errors
-
-Large $R$:
-
-> "Sensor readings are unreliable."
+### Intuition
 
 Small $R$:
 
-> "Sensor readings are trustworthy."
+> Reliable sensor.
+
+Large $R$:
+
+> Unreliable sensor.
 
 ---
 
-# State Estimate and Covariance
+# Uncertainty
 
-Kalman Filtering estimates two quantities:
+The Kalman Filter doesn't just estimate the state.
 
-State estimate:
+It also estimates how uncertain it is.
 
-$$
-\hat{x}
-$$
+This uncertainty is stored in the covariance matrix $P$.
 
-Uncertainty of estimate:
+Example:
 
-$$
-P
-$$
+Estimate A:
 
-where
+$100 \pm 0.01$
 
-$$
-P=
-\text{Covariance of estimation error}
-$$
+Estimate B:
 
----
+$100 \pm 20$
 
-## Interpretation of P
+Both estimates are 100, but the confidence is very different.
 
-Suppose
-
-$$
-\hat{x}=100
-$$
-
-This estimate is meaningless without uncertainty.
-
-Examples:
-
-$$
-100 \pm 0.01
-$$
-
-or
-
-$$
-100 \pm 20
-$$
-
-Both have the same estimate but very different confidence.
-
-The covariance matrix $P$ quantifies that confidence.
+That confidence is represented by $P$.
 
 ---
 
-# Kalman Filter Cycle
+# Step 1: Prediction
 
-At every timestep:
-
-```text
-Predict
-   ↓
-Measure
-   ↓
-Update
-   ↓
-Repeat
-```
-
----
-
-# Step 1: Prediction (Time Update)
-
-Use the system model to predict the next state.
-
-## State Prediction
+Using the model, predict the next state.
 
 $$
 \hat{x}_{k|k-1}
@@ -230,13 +199,15 @@ A\hat{x}_{k-1|k-1}
 Bu_{k-1}
 $$
 
-Meaning:
+Interpretation:
 
-> Predict where the system should be before seeing the new measurement.
+> Where do I think the system will be before seeing the new measurement?
 
 ---
 
-## Covariance Prediction
+## Predicting Uncertainty
+
+The uncertainty is also propagated forward:
 
 $$
 P_{k|k-1}
@@ -246,46 +217,22 @@ A P_{k-1|k-1} A^T
 Q
 $$
 
-Meaning:
+Notice the $+Q$.
 
-- Transform old uncertainty forward.
-- Add process uncertainty.
-
-Since uncertainty accumulates over time:
-
-$$
-P_{k|k-1}
->
-P_{k-1|k-1}
-$$
-
-typically.
+Every prediction introduces additional uncertainty.
 
 ---
 
-# Step 2: Update (Measurement Correction)
+# Step 2: Compare Prediction With Measurement
 
-A new measurement arrives.
+Suppose:
 
-Kalman Filter compares:
+- Prediction = 15 m
+- Sensor = 13 m
 
-Predicted measurement:
+Difference = 2 m.
 
-$$
-H\hat{x}_{k|k-1}
-$$
-
-with actual measurement:
-
-$$
-z_k
-$$
-
----
-
-# Innovation
-
-Innovation is the prediction error.
+This difference is called the **innovation**.
 
 $$
 y_k
@@ -297,85 +244,36 @@ $$
 
 Interpretation:
 
-$$
-\text{Innovation}
-=
-\text{Measurement}
--
-\text{Prediction}
-$$
+> Innovation = Measurement − Prediction
 
----
-
-### Small Innovation
-
-Prediction was accurate.
-
----
-
-### Large Innovation
-
-Prediction was inaccurate.
-
----
-
-# Innovation Covariance
-
-Measures uncertainty in the innovation.
-
-$$
-S_k
-=
-H P_{k|k-1} H^T
-+
-R
-$$
-
-Large $S_k$ means the innovation is expected to vary significantly.
+A large innovation means the prediction was inaccurate.
 
 ---
 
 # Kalman Gain
 
-The most important equation.
-
-0
-
-The Kalman Gain determines:
-
-> How much should the filter trust the measurement versus the prediction?
-
----
-
-## Interpretation
-
-### Large Gain
+The Kalman Gain determines how much the filter should trust the measurement.
 
 $$
-K_k \uparrow
+K_k
+=
+P_{k|k-1}
+H^T
+(HP_{k|k-1}H^T + R)^{-1}
 $$
 
-Trust measurement more.
+You do not need to memorize this equation.
 
-Apply a large correction.
+The important idea is:
 
----
-
-### Small Gain
-
-$$
-K_k \downarrow
-$$
-
-Trust model more.
-
-Apply a small correction.
+- Large $K$ → trust measurement more
+- Small $K$ → trust prediction more
 
 ---
 
 # State Update
 
-Correct the prediction using the innovation.
+The estimate is corrected using the innovation.
 
 $$
 \hat{x}_{k|k}
@@ -385,36 +283,15 @@ $$
 K_k y_k
 $$
 
-Expanded:
-
-$$
-\hat{x}_{k|k}
-=
-\hat{x}_{k|k-1}
-+
-K_k
-\left(
-z_k
--
-H\hat{x}_{k|k-1}
-\right)
-$$
-
 Interpretation:
 
-$$
-\text{New Estimate}
-=
-\text{Prediction}
-+
-\text{Correction}
-$$
+> New Estimate = Prediction + Correction
 
 ---
 
 # Covariance Update
 
-After incorporating the measurement:
+After receiving a measurement, uncertainty decreases.
 
 $$
 P_{k|k}
@@ -423,200 +300,71 @@ P_{k|k}
 P_{k|k-1}
 $$
 
-Meaning:
-
-After receiving information from sensors, uncertainty decreases.
-
-Therefore:
-
-$$
-P_{k|k}
-<
-P_{k|k-1}
-$$
-
-typically.
+This means the filter becomes more confident after incorporating sensor information.
 
 ---
 
-# Effect of Process Noise Q
+# Effect of Q
 
-Recall:
+$Q$ controls trust in the model.
 
-$$
-P_{k|k-1}
-=
-A P_{k-1|k-1} A^T
-+
-Q
-$$
+If $Q$ increases:
 
-Increasing $Q$:
-
-$$
-Q \uparrow
-$$
-
-causes
-
-$$
-P_{k|k-1}\uparrow
-$$
-
-which causes
-
-$$
-K_k \uparrow
-$$
-
-Result:
-
-> Trust measurements more.
-
----
+- Predicted uncertainty increases
+- Kalman Gain increases
+- Measurements are trusted more
 
 Summary:
 
-$$
-Q\uparrow
-\Rightarrow
-P\uparrow
-\Rightarrow
-K\uparrow
-$$
+$Q \uparrow \Rightarrow K \uparrow$
 
 ---
 
-# Effect of Measurement Noise R
+# Effect of R
 
-Kalman Gain contains:
+$R$ controls trust in the sensor.
 
-$$
-(HP_{k|k-1}H^T + R)^{-1}
-$$
+If $R$ increases:
 
-Increasing $R$:
-
-$$
-R\uparrow
-$$
-
-causes
-
-$$
-K_k\downarrow
-$$
-
-Result:
-
-> Trust measurements less.
-
----
+- Sensor becomes less reliable
+- Kalman Gain decreases
+- Model is trusted more
 
 Summary:
 
-$$
-R\uparrow
-\Rightarrow
-K\downarrow
-$$
+$R \uparrow \Rightarrow K \downarrow$
 
 ---
 
 # Drone Example
 
-Consider a quadrotor.
-
-State vector:
-
-$$
-x=
-\begin{bmatrix}
-x\\
-y\\
-z\\
-v_x\\
-v_y\\
-v_z
-\end{bmatrix}
-$$
-
-Sensors:
+Prediction comes primarily from:
 
 - IMU
+- Motion equations
+
+Correction comes from:
+
 - GPS
-- Magnetometer
 - Barometer
+- Magnetometer
 
-Prediction:
+The drone continuously performs:
 
-- Uses equations of motion.
-- Integrates IMU measurements.
+```text
+Predict
+   ↓
+Measure
+   ↓
+Correct
+   ↓
+Repeat
+```
 
-Correction:
-
-- GPS corrects position.
-- Barometer corrects altitude.
-- Magnetometer corrects heading.
-
-This continuous fusion process allows the drone to estimate its true state.
-
----
-
-# Why Kalman Filters Work
-
-A Kalman Filter continuously balances:
-
-1. What physics predicts.
-2. What sensors observe.
-
-using uncertainty information.
-
-The entire filter can be summarized as:
-
-> Predict using physics, compare with measurements, then blend the two according to their respective uncertainties.
+hundreds of times per second.
 
 ---
 
-# Limitations of Kalman Filters
+# One-Sentence Summary
 
-1. Assumes linear dynamics.
-2. Assumes Gaussian noise.
-3. Requires a reasonably accurate system model.
-4. Sensitive to incorrect tuning of $Q$ and $R$.
-5. Performance depends on initial estimates.
-6. Computational cost increases for large state vectors.
-
----
-
-# Extensions
-
-## Extended Kalman Filter (EKF)
-
-Used for nonlinear systems.
-
-Linearizes the system around the current estimate.
-
-Widely used in drones and robotics.
-
----
-
-## Unscented Kalman Filter (UKF)
-
-Avoids explicit linearization.
-
-Uses sigma points to propagate uncertainty.
-
-More accurate than EKF for strongly nonlinear systems.
-
----
-
-## Error-State Kalman Filter (ESKF)
-
-Most common in modern drone flight controllers.
-
-Tracks only estimation errors.
-
-Provides improved numerical stability for attitude estimation.
-
-Used in PX4 and ArduPilot.
+A Kalman Filter is a mathematical method that continuously combines a noisy prediction and a noisy measurement, weighting each according to how much it trusts them.
