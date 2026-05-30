@@ -6,7 +6,7 @@ on:
       - v5
 
 env:
-  THEME_NAME: <THEME-NAME>
+  THEME_NAME: tokyo-night
  
 permissions:
   contents: read
