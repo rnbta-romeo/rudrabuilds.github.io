@@ -6,6 +6,10 @@
   font-size: 16px;
 }
 
+article p {
+  color: var(--body) !important;
+}
+
 :root:root {
   --icon-size: var(--icon-m) !important;
   --icon-stroke: var(--icon-m-stroke-width) !important;
