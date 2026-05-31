@@ -14172,3 +14172,16 @@ blockquote.callout {
     }
   }
 }
+
+article {
+  max-width: 75ch;
+  line-height: 1.7;
+}
+
+.katex {
+  font-size: 1.05em; 
+}
+
+.katex-display {
+  margin: 1.2rem 0;
+}

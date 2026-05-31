@@ -25,6 +25,7 @@ Here is a better view at it -
 | $1$    | $2^1$   | Yes |
 | $0$    | $2^2$   | No  |
 | $1$    | $2^4$   | Yes |
+
 Final answer becomes $\rightarrow$ $2^5 = 2^1 \times 2^4$ 
 
 > [!summary] Fact
@@ -38,4 +39,26 @@ Let us take another example, say $3^{10}$, we know that the binary for of $10$ i
 | $1$    | $3^2$   | Yes |
 | $0$    | $3^4$   | No  |
 | $1$    | $3^8$   | Yes |
+
 The answer becomes $\rightarrow$ $3^{10} = 3^2 \times 3^8$ 
+But what do we calculate $x^{-n}$ when $n$ becomes negative? Its simple because $x^{-n}$ is just $\left(\dfrac{1}{x}\right)^n$  
+So finally the code for binary exponentiation is -
+```cpp
+double pow (double x, int n) {
+	
+	double ans = 1;
+	
+	if (n < 0) {
+		x = 1/x;
+		n = -n;
+	}
+	
+	while(n > 0) {
+		if (n % 2 == 1) {
+			ans *= x;
+		}
+		x *= x;
+	}
+	return ans;
+}
+```
