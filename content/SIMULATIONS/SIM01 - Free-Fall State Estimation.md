@@ -1,6 +1,3 @@
-
-> [!Note]
-> I have used [Octave](https://www.octave.org) for the simulation and the complete source code can be found [here.]() 
 #### What does this simulation do?
 Estimate the height and velocity of a falling object using - 
 - A physics model
@@ -27,3 +24,6 @@ It works in the following steps -
 4) **Step 4 - Correction:** after the Kalman gain is calculates, it updates the estimated prediction accounting for the corrections. If the current estimate is $x$ then after correction it becomes $x = x + K(b - a)$ 
 This is how all those messy sensor inputs, coupled with the predictions from the physics model gives us a near perfect estimation of where the object is located in space and time. We get the following plot after the KF calculations -
 ![[Pasted image 20260601125821.png]]
+
+> [!Note]
+> I have used [Octave](https://www.octave.org) for the simulation and the complete source code can be found here - [[SIM01 Source Code]]. 
