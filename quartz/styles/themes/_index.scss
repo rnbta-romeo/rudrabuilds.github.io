@@ -14178,10 +14178,20 @@ article {
   line-height: 1.7;
 }
 
+/* ===== Authentic LaTeX / KaTeX Styling ===== */
+
 .katex {
-  font-size: 0.98em; 
+  font-family: KaTeX_Main, serif !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-size: 1em;
+  line-height: 1.2;
+}
+
+.katex .mathnormal {
+  font-family: KaTeX_Math, KaTeX_Main, serif !important;
 }
 
 .katex-display {
-  margin: 1.2rem 0;
+  margin: 1em 0;
 }
