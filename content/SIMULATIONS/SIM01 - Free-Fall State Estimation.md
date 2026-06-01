@@ -8,6 +8,7 @@ Estimate the height and velocity of a falling object using -
 The motion of an object freely falling under the influence of gravity is simply governed by the equations of kinematics i.e. -
 1) $v_{final} = v_{initial} + a t$ 
 2) $h_{final} = h_{initial} + vt$ 
+
 and that's it! These two equations will be our model that tells us where the object ideally should be.
 
 #### The Noisy Sensor
@@ -27,4 +28,4 @@ This is how all those messy sensor inputs, coupled with the predictions from the
 ![[Pasted image 20260601125821.png]]
 
 > [!Note]
-> I have used [Octave](https://www.octave.org) for the simulation and the complete source code can be found here - [[SIM01 Source Code]]. 
+> I have used [Octave](https://www.octave.org) for the simulation and the complete source code can be found [here](https://github.com/rudraBuilds/Simulations/blob/main/freefall_state_estimation.m)
