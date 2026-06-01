@@ -66,9 +66,8 @@ Using only the model also leads to errors.
 
 A Kalman Filter continuously answers:
 
-> How much should I trust the model?
->
-> How much should I trust the sensor?
+- How much should I trust the model?
+- How much should I trust the sensor?
 
 ---
 
@@ -90,7 +89,7 @@ where:
 
 Think of this equation as:
 
-> New State = Predicted State + Control Effect + Unknown Disturbances
+ New State = Predicted State + Control Effect + Unknown Disturbances
 
 ---
 
@@ -112,13 +111,9 @@ where $Q$ is called the **process noise covariance**.
 
 ### Intuition
 
-Small $Q$:
+Small $Q$ $\rightarrow$ I trust my model.
 
-> I trust my model.
-
-Large $Q$:
-
-> I do not trust my model very much.
+Large $Q$ $\rightarrow$  I do not trust my model very much.
 
 ---
 
@@ -360,6 +355,6 @@ hundreds of times per second.
 
 ---
 
-# One-Sentence Summary
+# Summary
 
 A Kalman Filter is a mathematical method that continuously combines a noisy prediction and a noisy measurement, weighting each according to how much it trusts them.
