@@ -22,6 +22,7 @@ It works in the following steps -
 2) **Step 2 - Sensor:** the sensor data arrives and gives the perceived height of the object. Lets call this $b.$ The filter calculates the difference between the data in step 1 and 2, this difference is called the innovation $y$ i.e. $y = b - a$
 3) **Step 3 - Kalman Gain:** it measures how much of the difference, that is, the innovation should I incorporate in my correction. Lets call this $K.$
 4) **Step 4 - Correction:** after the Kalman gain is calculates, it updates the estimated prediction accounting for the corrections. If the current estimate is $x$ then after correction it becomes $x = x + K(b - a)$ 
+
 This is how all those messy sensor inputs, coupled with the predictions from the physics model gives us a near perfect estimation of where the object is located in space and time. We get the following plot after the KF calculations -
 ![[Pasted image 20260601125821.png]]
 

@@ -631,7 +631,7 @@ body {
     filter: var(--link-external-filter);
     backdrop-filter: none;
     box-shadow: none;
-    font-family: Vollkorn, serif;
+    font-family: "Libertinus Serif", serif;
     font-weight: var(--link-weight);
     outline: rgb(138, 92, 245) none 0px;
     text-decoration: underline;
@@ -14179,7 +14179,7 @@ article {
 }
 
 .katex {
-  font-size: 1.05em; 
+  font-size: 0.98em; 
 }
 
 .katex-display {
