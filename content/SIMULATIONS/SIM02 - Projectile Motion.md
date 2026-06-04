@@ -16,10 +16,10 @@ We first initialize the physical parameters that is v_0 and \theta. Then we run 
 4) repeats until the object hits the ground
 
 #### Examples 
-Here is what we get with the input $v_0 = 20,  \theta=45$ 
+Here is what we get with the input $v_0 = 20,  \theta=45\degree$ 
 ![[Pasted image 20260602132707.png]]
 
-Lets see $\theta = 55$
+Lets see $\theta = 55\degree$ 
 ![[Pasted image 20260603130032.png]]
 
 #### Error Note
@@ -34,3 +34,9 @@ y = v_y * t(1:i) - 0.5*g*t(1:i).^2;
 x = v_x * t(i);
 y = v_y * t(i) - 0.5*g*t(i).^2;
 ```
+
+#### Future Improvements
+1) Add air resistance
+2) Add bounce when colliding with ground (see [[SIM03 - Bouncing Ball]] )
+3) Make a gif from octave
+4) Add a noisy sensor and KF estimation (see [[SIM04 - Projectile State Estimation]])
