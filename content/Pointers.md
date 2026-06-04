@@ -3,7 +3,7 @@ Every variable is stored in the memory and each space has a unique address to it
 
 #### Pointers 
 Pointers are just special variables that stores the memory address of the variable in it. 
-```C++
+```cpp
 int a = 10;
 int* ptr_a = &a; //creates a pointer to a
 
@@ -14,27 +14,27 @@ float *ptr_b = &b; //creates a pointer to b
 Note that the * operator can either be used with the data type or with the variable name.
 
 Since pointer itself is a variable, it has an address too. We can make a pointer to a pointer to store the address of a pointer. A pointer to the pointer of `a` as defined above would look like:
-```C++
+```cpp
 int** ptrToPtr_a = &pointer;
 ```
 
 #### Dereferencing 
 If the `&` operator gives us the address then the `*` operator gives us the value stored that is stored in that address, we call this the Dereference Operator. To deference a pointer we use `*` once, and to dereference a pointer to a pointer we use double `**`
-```C++
+```cpp
 cout << *(ptr_a); //output is 10
 cout << **(ptrToPtr_a); //output is 10
 ```
 
 #### Null Pointer
 It is a pointer that does not point to any location.
-```C++
+```cpp
 int* ptr = NULL;
 ```
 
 #### Pass by Reference
 There are two ways to pass a variable inside function:
 1) **Pass by Pointer:** We store the pointer as the input to a function and then in the main function call the function using the address as an input, this directly makes the changes in the main function without creating a copy of the variable. Lets create a function to change the variable `a` 
-```C++
+```cpp
     void changeA (int* ptr_a) {
         *ptr_a = 20;
     }
@@ -46,7 +46,7 @@ There are two ways to pass a variable inside function:
 ```
 
 2) **Pass by Alias:** Here we use another variable as an input that is just the alias of the variable inside the main function, any changes to the alias changes the main variable because both of them are using the same location in the memory but just with a different name.
-```C++
+```cpp
     void changeA (int &b) {
         b = 20;
     }
@@ -59,7 +59,7 @@ There are two ways to pass a variable inside function:
 
 #### Array Pointers
 When we create an array, it is already a pointer that stores the address of the zeroth index of the array in it. For example:
-```C++
+```cpp
 int arr[] = {1,2,3,4,5};
 cout << arr; //output is the address of the zeroth index arr[0]
 cout << *arr; //output is 1 because we dereferenced the pointer
