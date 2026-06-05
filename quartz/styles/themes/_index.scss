@@ -74,7 +74,7 @@ h1 {
   --collapse-icon-color: var(--text-faint) !important;
   --collapse-icon-color-collapsed: var(--text-accent) !important;
   --graph-controls-width: 240px !important;
-  --graph-line: var(--color-base-35, var(--background-modifier-border-focus)) !important;
+  --graph-line: rgba(255, 255, 255, 0.28) !important;
   --graph-node: var(--text-muted) !important;
   --graph-node-attachment: var(--color-yellow) !important;
   --graph-node-focused: var(--text-accent) !important;
@@ -14194,4 +14194,95 @@ article {
 
 .katex-display {
   margin: 1em 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+/* =========================
+   CODE BLOCK STYLING
+========================= */
+
+pre {
+  padding: 1.25rem;
+  border-radius: 16px;
+  overflow-x: auto;
+
+  background: #1a1b26; /* Tokyo Night background */
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  box-shadow:
+    0 8px 30px rgba(0, 0, 0, 0.35),
+    0 0 0 1px rgba(255,255,255,0.02) inset;
+
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+
+  position: relative;
+}
+
+/* macOS-style dots */
+
+pre::before {
+  content: "● ● ●";
+  color: #ff5f56;
+
+  display: block;
+
+  font-size: 0.85rem;
+  letter-spacing: 6px;
+
+  margin-bottom: 12px;
+}
+
+/* Code font */
+
+code,
+pre {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Actual code text */
+
+pre code {
+  font-size: 0.95rem;
+  line-height: 1.8;
+
+  color: #c0caf5;
+
+  background: transparent;
+}
+
+/* Inline code */
+
+:not(pre) > code {
+  background: rgba(255,255,255,0.08);
+
+  padding: 0.2rem 0.45rem;
+
+  border-radius: 6px;
+
+  font-size: 0.9em;
+}
+
+/* Scrollbar */
+
+pre::-webkit-scrollbar {
+  height: 8px;
+}
+
+pre::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.15);
+  border-radius: 999px;
+}
+
+pre::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.graph-view svg line,
+.graph-view svg path {
+  stroke-width: 2.5px !important;
+  opacity: 0.9 !important;
+
+  filter: drop-shadow(0 0 3px rgba(255,255,255,0.25));
 }
