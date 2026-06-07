@@ -9,3 +9,4 @@ order: "-1"
 6) [[Container with Most Water]]
 7) Product of an Array Except Itself
 8) [[Pointers]]
+9) [[Binary Search]]
