@@ -37,7 +37,13 @@ body[data-slug="index"] .article-title {
 
 // REMOVES THAT EXTRA RIGHT SPACE WHEN SCROLLING IN PHONE
 html, body {
-  overflow-x: hidden;
-  width: 100%;
+  max-width: 100%;
+  overflow-x: clip;
+}
+
+//for scrolable code block
+pre {
+  overflow-x: auto;
+  max-width: 100%;
 }
 
