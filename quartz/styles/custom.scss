@@ -170,3 +170,13 @@ figure[data-rehype-pretty-code-figure] pre {
 .graph {
   border: none !important;
 }
+
+/* Minimal seamless graph style */
+
+.graph-container,
+.graph-outer,
+.graph {
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+}
