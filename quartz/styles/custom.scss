@@ -62,3 +62,16 @@ iframe {
   max-width: 100%;
   height: auto;
 }
+
+/* Keep code inside codeblock container */
+
+figure[data-rehype-pretty-code-figure] pre {
+  overflow-x: auto;
+  padding-bottom: 1rem;
+}
+
+figure[data-rehype-pretty-code-figure] code {
+  display: block;
+  width: max-content;
+  min-width: 100%;
+}
