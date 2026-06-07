@@ -1,10 +1,10 @@
 ---
-title: '""'
+title: "''"
 publish: "false"
 enableToc: "false"
 comments: "false"
 ---
-# Welcome to my small and humble digital space...
+# Rudra Builds
 
 Here I will be documenting my baby steps into the world of tech, coding, robots, philosophy...and everything that lies in between. 
 
