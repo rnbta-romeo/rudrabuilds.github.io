@@ -1,10 +1,10 @@
 ---
-title: Home
+title: Rudra Builds
 publish: "false"
 enableToc: "false"
 comments: "false"
 ---
-# Rudra Builds
+# Rudranil Bhattacharya
 
 Here I will be documenting my baby steps into the world of tech, coding, robots, philosophy...and everything that lies in between. 
 

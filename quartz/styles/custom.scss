@@ -8,29 +8,24 @@ body[data-slug = "index"] .content-meta {
   display: none;
 }
 
-// STYLES PAGE TITLE RUDRA BUILDS
-.page.title {
-  font-size: 2rem;
-  font-weight: 800;
-  margin-top: 1rem;
-  margin-bottom: 2rem;
-}
-
+// HIDES THE TITLE FONTMATTER BUT KEEPS IT IN TAB TEXT
 body[data-slug="index"] .article-title {
   display: none;
 }
 
-body[data-slug="index"] h1 {
-  font-size: 4rem;
-  line-height: 0.9;
-  margin-top: 1rem;
-  margin-bottom: 2rem;
-  max-width: 300px;
-}
+/* MOBILE TOP TITLE */
 
 @media screen and (max-width: 800px) {
-  body[data-slug="index"] h1 {
-    font-size: 3rem;
-    max-width: 220px;
+  .page-title {
+    display: block !important;
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-top: 0.4rem;
+    margin-bottom: 0.3rem;
+    padding-left: 0.3rem;
+  }
+
+  .left.sidebar {
+    gap: 0.2rem;
   }
 }
