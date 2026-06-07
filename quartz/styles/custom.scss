@@ -69,6 +69,10 @@ figure[data-rehype-pretty-code-figure] {
   overflow-x: auto;
   border-radius: 12px;
   padding-right: 1rem;
+
+  box-shadow:
+    0 0 10px rgba(0, 0, 0, 0.3),
+    0 0 25px rgba(132, 165, 157, 0.08);
 }
 
 figure[data-rehype-pretty-code-figure] pre {
