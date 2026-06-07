@@ -8,7 +8,7 @@ comments: "false"
 > *Ko addhā veda ka iha pravocat*
 >
 > *“Who truly knows, and who can here declare, when it was born and from where this creation came?”*
-> — Nasadiya Sukta (Rig Veda 10.129.6)
+> *— Nasadiya Sukta (Rig Veda 10.129.6)*
 
 # Rudranil Bhattacharya
 Building my understanding of technology, mathematics, physics and all other things interesting - one small step at a time. 
