@@ -231,10 +231,17 @@ figure[data-rehype-pretty-code-figure] pre {
 
 blockquote {
   border-left: none !important;
-  padding-left: 0 !important;
-  margin-left: 2rem;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+
+  max-width: 100% !important;
+  width: 100%;
+
+  margin: 2rem 0;
+
+  padding-left: 0;
+
   font-style: italic;
-  opacity: 0.85;
+
+  opacity: 0.9;
+
+  line-height: 1.8;
 }
