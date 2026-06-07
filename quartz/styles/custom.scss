@@ -209,20 +209,24 @@ figure[data-rehype-pretty-code-figure] pre {
 }
 
 .home-card {
-  padding: 1.5rem;
-  border-radius: 18px;
-  background: var(--lightgray);
-  border: 1px solid var(--gray);
-  transition: all 0.25s ease;
+  padding: 1rem 1.2rem;
+  border-radius: 12px;
+
+  background: transparent;
+
+  border: 1px solid color-mix(in srgb, var(--gray) 30%, transparent);
+
+  transition: 0.2s ease;
 }
 
 .home-card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-2px);
   border-color: var(--secondary);
 }
 
 .home-card h3 {
-  margin-top: 0;
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
 }
 
 blockquote {
