@@ -4,7 +4,7 @@ publish: "false"
 enableToc: "false"
 comments: "false"
 ---
-> “को अद्धा वेद क इह प्रवोचत्”
+> *“को अद्धा वेद क इह प्रवोचत्”*
 > *Ko addhā veda ka iha pravocat*
 >
 > *“Who truly knows, and who can here declare, when it was born and from where this creation came?”*
