@@ -4,12 +4,33 @@ publish: "false"
 enableToc: "false"
 comments: "false"
 ---
+> *"I, an universe of atom, an atom in an universe." - Richard Feynman*
 # Rudranil Bhattacharya
+Building my understanding of technology, mathematics, physics and all other things interesting - one small step at a time. 
+I use this space to document what I learn, build, simulate, and struggle with along the way.
 
-Here I will be documenting my baby steps into the world of tech, coding, robots, philosophy...and everything that lies in between. 
+## Current Interests
 
-As of now my interests dwells in two major domains -
-- Firstly I want to build my base in programming. I am learning the C++ language with a special focus on Data Structures and Algorithm. Here are my [[01 - Index - DSA|DSA Notes]] that I will be updating as I keep learning.
-- Secondly I am immensely interested in drones and I am slowly getting into its working. I am auditing this course called Drone Systems & Control and here are my [[01 - Index - Drone|notes]]. I want to make a full simulation of drone eventually, so I keep making small [[01 - Index - Simulation|simulations]] that help me covert the theory learned in the course in practical understanding
+<div class="card-grid">
+<div class="home-card">
 
-Please note that this are not polished notes, but rather a piece of growing thought that keeps evolving over time...so there might be some coherence issues at some places (you might have spotted a grammatical error already) - so bear with me on that :) 
+### Drones
+I want to make a full simulation of a drone eventually. At the moment, I am auditing a course on Drone Systems and Control to build my theoretical understanding.
+[[01 - Index - Drone|Drone Systems Notes]]
+
+</div>
+
+<div class="home-card">
+### Simulations
+I build simple simulations to convert the theoretical ideas from my notebook into tangible physical intuition. 
+[[01 - Index - Simulation|Simulations]]
+</div>
+
+<div class="home-card">
+### Programming
+I am building my programming foundation through C++ with a focus on problem solving using data structures and algorithms.
+[[01 - Index - DSA|DSA Notes]]
+</div>
+</div>
+
+

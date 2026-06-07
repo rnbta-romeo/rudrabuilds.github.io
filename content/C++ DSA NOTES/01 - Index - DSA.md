@@ -1,5 +1,7 @@
 ---
 order: "-1"
+aliases:
+  - DSA Notes
 ---
 1) [[Maximum Subarray Sum]]
 2) [[Pair Sum]]

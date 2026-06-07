@@ -1,5 +1,7 @@
 ---
 order: "-1"
+aliases:
+  - Drone Systems Notes
 ---
 1) Basics of Estimation
 2) [[Kalman Filter]]

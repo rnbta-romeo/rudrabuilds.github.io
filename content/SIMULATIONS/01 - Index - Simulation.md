@@ -1,6 +1,6 @@
 ---
 aliases:
-  - simulations
+  - Simulations
 order: "-1"
 ---
 1) [[SIM01 - Free-Fall State Estimation]] (1D Kalman Filter)
