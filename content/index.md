@@ -1,5 +1,5 @@
 ---
-title: "''"
+title:
 publish: "false"
 enableToc: "false"
 comments: "false"
