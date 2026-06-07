@@ -5,11 +5,9 @@ enableToc: "false"
 comments: "false"
 ---
 > “को अद्धा वेद क इह प्रवोचत्”
->
 > *Ko addhā veda ka iha pravocat*
 >
-> “Who truly knows, and who can here declare, when it was born and from where this creation came?”
->
+> *“Who truly knows, and who can here declare, when it was born and from where this creation came?”*
 > — Nasadiya Sukta (Rig Veda 10.129.6)
 
 # Rudranil Bhattacharya
