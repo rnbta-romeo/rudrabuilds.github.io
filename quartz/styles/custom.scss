@@ -232,22 +232,21 @@ figure[data-rehype-pretty-code-figure] pre {
 blockquote {
   border-left: none !important;
 
-  max-width: 100% !important;
-  width: 100%;
-
-  margin: 3rem 0;
-
   padding-left: 0;
+
+  margin: 2rem auto 3rem auto;
+
+  max-width: 700px;
 
   text-align: center;
 
   font-style: italic;
 
-  font-size: 1.3rem;
+  opacity: 0.82;
 
-  line-height: 1.8;
+  line-height: 1.6;
 
-  opacity: 0.9;
+  font-size: 1.05rem;
 }
 
   
