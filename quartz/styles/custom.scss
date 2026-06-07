@@ -228,6 +228,9 @@ figure[data-rehype-pretty-code-figure] pre {
 blockquote {
   border-left: none !important;
   padding-left: 0 !important;
+  margin-left: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
   font-style: italic;
   opacity: 0.85;
 }
