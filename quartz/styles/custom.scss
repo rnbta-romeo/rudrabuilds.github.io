@@ -35,17 +35,26 @@ body[data-slug="index"] .article-title {
   }
 }
 
-/* Fix mobile overflow from code blocks */
+/* Prevent overall page sideways scroll */
 
-pre {
-  max-width: 100%;
-  overflow-x: auto;
+html,
+body {
+  overflow-x: hidden;
 }
+
+/* Keep code blocks scrollable */
 
 figure[data-rehype-pretty-code-figure] {
-  max-width: 100%;
   overflow-x: auto;
+  max-width: 100%;
 }
+
+pre {
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+/* Responsive media */
 
 img,
 video,
@@ -53,4 +62,3 @@ iframe {
   max-width: 100%;
   height: auto;
 }
-
