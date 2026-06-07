@@ -1,5 +1,5 @@
 ---
-title: Homepage
+title: '""'
 publish: "false"
 enableToc: "false"
 comments: "false"
