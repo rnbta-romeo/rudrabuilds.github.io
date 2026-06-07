@@ -2,3 +2,7 @@
 @use "themes";
 
 // put your custom CSS here!
+
+.page.title + .content-meta {
+  display: none;
+}
