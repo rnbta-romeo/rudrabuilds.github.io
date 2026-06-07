@@ -4,7 +4,9 @@ publish: "false"
 enableToc: "false"
 comments: "false"
 ---
-> *"I, an universe of atom, an atom in an universe." - Richard Feynman*
+> *"I, an universe of atom, an atom in an universe." 
+> - Richard Feynman*
+
 # Rudranil Bhattacharya
 Building my understanding of technology, mathematics, physics and all other things interesting - one small step at a time. 
 I use this space to document what I learn, build, simulate, and struggle with along the way.
@@ -21,16 +23,21 @@ I want to make a full simulation of a drone eventually. At the moment, I am audi
 </div>
 
 <div class="home-card">
+
 ### Simulations
 I build simple simulations to convert the theoretical ideas from my notebook into tangible physical intuition. 
 [[01 - Index - Simulation|Simulations]]
+
 </div>
 
 <div class="home-card">
+
 ### Programming
 I am building my programming foundation through C++ with a focus on problem solving using data structures and algorithms.
 [[01 - Index - DSA|DSA Notes]]
+
 </div>
+
 </div>
 
 
