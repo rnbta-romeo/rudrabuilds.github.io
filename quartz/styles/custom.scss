@@ -34,3 +34,10 @@ body[data-slug="index"] .article-title {
     gap: 0.5rem;
   }
 }
+
+// REMOVES THAT EXTRA RIGHT SPACE WHEN SCROLLING IN PHONE
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
