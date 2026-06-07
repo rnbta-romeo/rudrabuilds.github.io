@@ -191,8 +191,8 @@ plugins:
   - source: github:quartz-community/page-title
     enabled: true
     layout:
-      position: beforeBody
-      priority: 1
+      position: header
+      priority: 10
   - source: github:quartz-community/darkmode
     enabled: true
     layout:
