@@ -171,12 +171,32 @@ figure[data-rehype-pretty-code-figure] pre {
   border: none !important;
 }
 
-/* Minimal seamless graph style */
+/* CLEAN GRAPH STYLE */
 
-.graph-container,
-.graph-outer,
-.graph {
+.graph-container {
   background: transparent !important;
-  box-shadow: none !important;
   border: none !important;
+  box-shadow: none !important;
+  padding: 0.5rem;
+}
+
+/* Actual graph canvas */
+
+.graph {
+  background: rgba(255, 255, 255, 0.02) !important;
+
+  border: 1px solid var(--lightgray);
+  border-radius: 16px;
+
+  min-height: 420px;
+
+  backdrop-filter: blur(6px);
+}
+
+/* Mobile sizing */
+
+@media screen and (max-width: 800px) {
+  .graph {
+    min-height: 300px;
+  }
 }
