@@ -16,6 +16,9 @@ body[data-slug = "index"] .content-meta {
   margin-bottom: 2rem;
 }
 
+body[data-slug="index"] .article-title {
+  display: none;
+}
 
 body[data-slug="index"] h1 {
   font-size: 4rem;
