@@ -35,15 +35,27 @@ body[data-slug="index"] .article-title {
   }
 }
 
-// REMOVES THAT EXTRA RIGHT SPACE WHEN SCROLLING IN PHONE
-html, body {
-  max-width: 100%;
-  overflow-x: clip;
+/* Prevent sideways scrolling on mobile */
+
+body {
+  overflow-x: hidden;
 }
 
-//for scrolable code block
-pre {
+/* Allow code blocks to scroll internally */
+
+pre,
+code {
   overflow-x: auto;
+  white-space: pre;
   max-width: 100%;
+}
+
+/* Prevent wide elements from exceeding screen */
+
+img,
+video,
+iframe {
+  max-width: 100%;
+  height: auto;
 }
 
