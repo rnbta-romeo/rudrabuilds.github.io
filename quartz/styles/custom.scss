@@ -63,15 +63,14 @@ iframe {
   height: auto;
 }
 
-/* Keep code inside codeblock container */
+/* Proper mobile scrolling code blocks */
 
-figure[data-rehype-pretty-code-figure] pre {
+figure[data-rehype-pretty-code-figure] {
   overflow-x: auto;
-  padding-bottom: 1rem;
+  border-radius: 12px;
 }
 
-figure[data-rehype-pretty-code-figure] code {
-  display: block;
-  width: max-content;
-  min-width: 100%;
+figure[data-rehype-pretty-code-figure] pre {
+  min-width: max-content;
+  margin: 0;
 }
