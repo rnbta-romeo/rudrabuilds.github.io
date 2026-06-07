@@ -1,5 +1,5 @@
 ---
-title:
+title: Home
 publish: "false"
 enableToc: "false"
 comments: "false"
