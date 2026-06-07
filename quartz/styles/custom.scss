@@ -6,3 +6,7 @@
 .page.title + .content-meta {
   display: none;
 }
+
+body[data-slug = "index"] .content-meta {
+  display: none;
+}

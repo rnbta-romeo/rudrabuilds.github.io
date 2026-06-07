@@ -1,6 +1,8 @@
 ---
 title: Rudra Builds
-date: "false"
+publish: "false"
+enableToc: "false"
+comments: "false"
 ---
 # Welcome to my small and humble digital space...
 

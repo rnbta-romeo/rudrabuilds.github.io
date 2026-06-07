@@ -14224,7 +14224,7 @@ pre {
 /* macOS-style dots */
 
 pre::before {
-  content: "● ● ●";
+  content: "  ● ● ●";
   color: #ff5f56;
 
   display: block;
