@@ -9,7 +9,7 @@ A 2D motion in physics is dealt by breaking it down into two motions in 1 dimens
 where $v_x$ and $v_y$ are the horizontal and vertical component of the velocity vector.
 
 #### Simulation
-We first initialize the physical parameters that is v_0 and \theta. Then we run a loop that - 
+We first initialize the physical parameters that is $v_0$ and $\theta.$ Then we run a loop that - 
 1) computes projectile position
 2) renders trajectory and projectile
 3) updates display and clears the previous path

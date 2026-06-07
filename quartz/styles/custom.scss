@@ -3,10 +3,15 @@
 
 // put your custom CSS here!
 
-.page.title + .content-meta {
+// REMOVES DATE METADATA FROM HOMEPAGE
+body[data-slug = "index"] .content-meta {
   display: none;
 }
 
-body[data-slug = "index"] .content-meta {
-  display: none;
+// STYLES PAGE TITLE RUDRA BUILDS
+.page.title {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
 }

@@ -19,7 +19,7 @@ int** ptrToPtr_a = &pointer;
 ```
 
 #### Dereferencing 
-If the `&` operator gives us the address then the `*` operator gives us the value stored that is stored in that address, we call this the Dereference Operator. To deference a pointer we use `*` once, and to dereference a pointer to a pointer we use double `**`
+If the `&` operator gives us the address then the `*` operator gives us the value that is stored in that address, we call this the Dereference Operator. To deference a pointer we use `*` once, and to dereference a pointer to a pointer we use double `**`
 ```cpp
 cout << *(ptr_a); //output is 10
 cout << **(ptrToPtr_a); //output is 10
