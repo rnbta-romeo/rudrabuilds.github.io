@@ -4,8 +4,13 @@ publish: "false"
 enableToc: "false"
 comments: "false"
 ---
-> *"I, an universe of atom, an atom in an universe."* 
-> *-Richard Feynman.*
+> “को अद्धा वेद क इह प्रवोचत्”
+>
+> *Ko addhā veda ka iha pravocat*
+>
+> “Who truly knows, and who can here declare, when it was born and from where this creation came?”
+>
+> — Nasadiya Sukta (Rig Veda 10.129.6)
 
 # Rudranil Bhattacharya
 Building my understanding of technology, mathematics, physics and all other things interesting - one small step at a time. 
