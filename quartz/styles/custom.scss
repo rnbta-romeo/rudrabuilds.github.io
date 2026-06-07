@@ -224,3 +224,10 @@ figure[data-rehype-pretty-code-figure] pre {
 .home-card h3 {
   margin-top: 0;
 }
+
+blockquote {
+  border-left: none !important;
+  padding-left: 0 !important;
+  font-style: italic;
+  opacity: 0.85;
+}
