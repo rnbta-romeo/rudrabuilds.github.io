@@ -35,22 +35,17 @@ body[data-slug="index"] .article-title {
   }
 }
 
-/* Prevent sideways scrolling on mobile */
+/* Fix mobile overflow from code blocks */
 
-body {
-  overflow-x: hidden;
-}
-
-/* Allow code blocks to scroll internally */
-
-pre,
-code {
-  overflow-x: auto;
-  white-space: pre;
+pre {
   max-width: 100%;
+  overflow-x: auto;
 }
 
-/* Prevent wide elements from exceeding screen */
+figure[data-rehype-pretty-code-figure] {
+  max-width: 100%;
+  overflow-x: auto;
+}
 
 img,
 video,
