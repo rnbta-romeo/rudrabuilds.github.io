@@ -1,0 +1,2 @@
+When we search for a word in dictionary, we don't look for it page by page. That's a long and hefty process. We instead open up a random page, and then relative to the first letter of the word we decide whether to search before the page we have opened or after that page. 
+That's exactly how binary search works, instead of checking element in the array, we 
