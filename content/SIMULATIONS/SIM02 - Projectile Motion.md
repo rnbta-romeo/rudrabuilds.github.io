@@ -22,6 +22,14 @@ Here is what we get with the input $v_0 = 20,  \theta=45\degree$
 Lets see $\theta = 55\degree$ 
 ![[Pasted image 20260603130032.png]]
 
+Here is how the simulation looks in octave.
+![[projectile.mp4]]
+<style> 
+video {
+   loop = true:
+}
+</style>
+
 
 #### Error Note
 I faced an infinite loop issue that made the animation never stop. This was because I used the vector incorrectly in the position calculation. The problematic code was - 
