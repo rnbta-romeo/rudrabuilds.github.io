@@ -1,4 +1,3 @@
-
 ## The Problem
 
 Imagine you're trying to track a moving car in thick fog.
@@ -131,9 +130,7 @@ where:
 - $H$ = observation matrix
 - $v_k$ = measurement noise
 
-Think:
-
-> Measurement = Reality + Sensor Error
+Think: Measurement = Reality + Sensor Error
 
 ---
 
@@ -147,13 +144,9 @@ where $R$ is the **measurement noise covariance**.
 
 ### Intuition
 
-Small $R$:
+Small $R$: Reliable sensor.
 
-> Reliable sensor.
-
-Large $R$:
-
-> Unreliable sensor.
+Large $R$: Unreliable sensor.
 
 ---
 
@@ -189,9 +182,7 @@ A\hat{x}_{k-1|k-1}
 Bu_{k-1}
 $$
 
-Interpretation:
-
-> Where do I think the system will be before seeing the new measurement?
+Interpretation: Where do I think the system will be before seeing the new measurement?
 
 ---
 
@@ -234,7 +225,7 @@ $$
 
 Interpretation:
 
-> Innovation = Measurement − Prediction
+Innovation = Measurement − Prediction
 
 A large innovation means the prediction was inaccurate.
 
@@ -275,7 +266,7 @@ $$
 
 Interpretation:
 
-> New Estimate = Prediction + Correction
+New Estimate = Prediction + Correction
 
 ---
 

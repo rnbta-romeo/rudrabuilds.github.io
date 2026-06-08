@@ -1,0 +1,2 @@
+*See [[Binary Search]] first.*
+

@@ -2,7 +2,7 @@
 Estimate the height and velocity of a falling object using - 
 - A physics model
 - A noisy sensor
-- A [[Kalman Filter]]
+- A [[Kalman Filter (KF)]]
 
 #### The Physics Model
 The motion of an object freely falling under the influence of gravity is simply governed by the equations of kinematics i.e. -
@@ -17,7 +17,7 @@ The plot below shows the true height according to our physics model and we also 
 ![[Pasted image 20260601122717.png|697]]
 
 ### The Kalman Filter
-Here comes the magical part - the [[Kalman Filter]]. It strikes a very fine balance between a) how much should the model be trusted and b) how much should the sensor be trusted. 
+Here comes the magical part - the [[Kalman Filter (KF)]]. It strikes a very fine balance between a) how much should the model be trusted and b) how much should the sensor be trusted. 
 It works in the following steps -
 1) **Step 1 - Prediction**: calculates where the object should be according to the physics model. Lets call this $a.$
 2) **Step 2 - Sensor:** the sensor data arrives and gives the perceived height of the object. Lets call this $b.$ The filter calculates the difference between the data in step 1 and 2, this difference is called the innovation $y$ i.e. $y = b - a$
