@@ -19,7 +19,7 @@ I use this space to document what I learn, build, simulate, and struggle with al
 <div class="card-grid">
 <div class="home-card">
 
-### Drones
+#### Drones
 I want to make a full simulation of a drone eventually. At the moment, I am auditing a course on Drone Systems and Control to build my theoretical understanding.
 &rarr; [[01 - Index - Drone|Drone Systems Notes]]
 
@@ -27,7 +27,7 @@ I want to make a full simulation of a drone eventually. At the moment, I am audi
 
 <div class="home-card">
 
-### Simulations
+#### Simulations
 I build simple simulations to convert the theoretical ideas from my notebook into tangible physical intuition. 
 &rarr; [[01 - Index - Simulation|Simulations]]
 
@@ -35,12 +35,19 @@ I build simple simulations to convert the theoretical ideas from my notebook int
 
 <div class="home-card">
 
-### Programming
+#### Programming
 I am building my programming foundation through C++ with a focus on problem solving using data structures and algorithms.
 &rarr; [[01 - Index - DSA|DSA Notes]]
 
 </div>
 
 </div>
+
+These are not polished notes or final ideas.
+
+They are a piece of growing thoughts that evolve over time - an attempt in trying to understand the world through the lens of science. A notebook of ongoing inquiry.
+
+Many things here are incomplete or imperfect, but that is precisely the point.
+
 
 
