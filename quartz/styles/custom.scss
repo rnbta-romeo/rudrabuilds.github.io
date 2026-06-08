@@ -201,6 +201,7 @@ figure[data-rehype-pretty-code-figure] pre {
   }
 }
 
+/* cards in homepage */
 .card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -229,6 +230,7 @@ figure[data-rehype-pretty-code-figure] pre {
   margin-bottom: 0.5rem;
 }
 
+/* quotes style */
 blockquote {
   border-left: none !important;
 
@@ -249,9 +251,8 @@ blockquote {
   font-size: 1.05rem;
 }
 
-header,
-.sidebar,
-.page-header {
-  transition: none !important;
+.page-header .popover-hint, .property-row, .properties {
+  display: none !important;
 }
+
   
