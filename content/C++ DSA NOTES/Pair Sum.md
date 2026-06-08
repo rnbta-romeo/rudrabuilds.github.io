@@ -1,6 +1,6 @@
 ---
 tags:
-  - two-pointer
+  - Two-pointer
 ---
 #### Problem 
 Given a target $n$, we have to find two elements in an sorted array such that its sum add up to $n$.

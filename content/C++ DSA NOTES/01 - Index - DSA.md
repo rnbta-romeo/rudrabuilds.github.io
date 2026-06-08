@@ -3,12 +3,17 @@ order: "-1"
 aliases:
   - DSA Notes
 ---
-1) [[Maximum Subarray Sum]]
-2) [[Pair Sum]]
-3) [[Majority Element]] 
-4) [[Binary Exponentiation]]
-5) Buy and Sell Stocks Problem
-6) [[Container with Most Water]]
-7) Product of an Array Except Itself
-8) [[Pointers]]
-9) [[Binary Search]]
+
+#### Concepts
+- [[Binary Exponentiation]]
+- [[Pointers]]
+- [[Binary Search]]
+
+#### Problems
+- [[Maximum Subarray Sum]] - #Kadanes-Algorithm 
+- [[Pair Sum]] - #Two-pointer 
+- [[Majority Element]] - #Moores-voting-algorithm 
+- Buy and Sell Stocks Problem
+- [[Container with Most Water]] - #Two-pointer 
+- Product of an Array Except Itself
+- Search in a Rotated Sorted Array 
