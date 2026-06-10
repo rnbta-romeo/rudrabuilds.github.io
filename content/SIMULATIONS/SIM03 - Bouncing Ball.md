@@ -11,3 +11,4 @@ We use the equations of motion under the influence of gravity to model the motio
    - change the direction of height opposite to the previous direction $\rightarrow$ $h = - h$
    - reduce magnitude of velocity and change its direction opposite to the initial direction. $\rightarrow$ $v = -0.5v$ 
    These two changes add that bouncing effect when the ball hits the ground.
+![[Recording_05_06_2026__08_26_pm.mp4]]
